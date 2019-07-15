@@ -6,7 +6,7 @@ import static java.lang.Float.parseFloat;
 
 public class ArrayPriceRange {
     public String[][] priceRange = {
-            {"kawka", "7.50"},
+            {"kawka", "10.50"},
             {"sambolon", "5.00"},
             {"persa", "9.00"},
             {"redcrab", "20.50"},
@@ -14,13 +14,14 @@ public class ArrayPriceRange {
             {"caramel", "5.50"},
     };
 
-    public ArrayList<String> getList(float input) {
+    public ArrayList<String> getList(String input) {
         ArrayList<String> resultados = new ArrayList<String>();
         String in = "";
 
         for (int i = 0; i < priceRange.length; i++) {
-            if (parseFloat(priceRange[i][1]) <= input) {
-
+            if (parseFloat(input) <= parseFloat(priceRange[i][1])) {
+                in = priceRange[i][0];
+                resultados.add(in);
             }
         }
         return resultados;
