@@ -1,9 +1,12 @@
 package net.dusktech.com.ueesonbudget;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -203,6 +206,8 @@ public class LoginActivity extends AppCompatActivity implements
             findViewById(R.id.signedInButtons).setVisibility(View.VISIBLE);
 
             findViewById(R.id.verifyEmailButton).setEnabled(!user.isEmailVerified());
+            hideKeyboard(LoginActivity.this);
+            jump();
         } else {
             mStatusTextView.setText(R.string.signed_out);
             mDetailTextView.setText(null);
@@ -225,5 +230,21 @@ public class LoginActivity extends AppCompatActivity implements
         } else if (i == R.id.verifyEmailButton) {
             sendEmailVerification();
         }
+    }
+
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
+    private void jump(){
+        Intent intent = new Intent(LoginActivity.this, Main2Activity.class);
+        startActivity(intent);
     }
 }
