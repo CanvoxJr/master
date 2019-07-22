@@ -47,5 +47,12 @@
         <item name="android:textSize">36sp</item>
     </style>
 
+    <style name="AppSearchView" parent="Widget.AppCompat.SearchView" >
+        <!-- Query Text Color -->
+        <item name="android:textColorPrimary">@color/white_1</item>
+        <!-- Hint Color -->
+        <item name="android:textColorHint">@color/white_1</item>
+    </style>
+
 
 </resources>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -35,6 +36,11 @@ public class Main2Activity extends AppCompatActivity {
         ilbuccoImage = findViewById(R.id.ilbuccoImage);
         caramelImage = findViewById(R.id.caramelImage);
         Log.d(TAG, "onCreate: " + priceRange);
+
+        Toast.makeText(Main2Activity.this,
+                "Bienvenido!",
+                Toast.LENGTH_SHORT).show();
+
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
