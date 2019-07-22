@@ -10,17 +10,26 @@
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/colorBlue"
+        android:background="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="back"
+            android:textColor="@android:color/white" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/resturantName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="75dp"
             android:fontFamily="sans-serif-smallcaps"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:text="@string/restaurante"
             android:textAlignment="center"
             android:textAllCaps="false"

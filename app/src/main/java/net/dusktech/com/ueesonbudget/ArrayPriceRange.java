@@ -26,4 +26,30 @@ public class ArrayPriceRange {
         }
         return resultados;
     }
+
+    public ArrayList<String> getListMax(String input) {
+        ArrayList<String> resultados = new ArrayList<String>();
+        String in = "";
+
+        for (int i = 0; i < priceRange.length; i++) {
+            if (parseFloat(input) >= parseFloat(priceRange[i][1])) {
+                in = priceRange[i][0];
+                resultados.add(in);
+            }
+        }
+        return resultados;
+    }
+
+    public ArrayList<String> getListMin(String input) {
+        ArrayList<String> resultados = new ArrayList<String>();
+        String in = "";
+
+        for (int i = 0; i < priceRange.length; i++) {
+            if (parseFloat(input) <= parseFloat(priceRange[i][1])) {
+                in = priceRange[i][0];
+                resultados.add(in);
+            }
+        }
+        return resultados;
+    }
 }
