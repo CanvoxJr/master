@@ -89,7 +89,7 @@ public class Main2Activity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (!minVal.getText().toString().isEmpty()) {
+               // if (!minVal.getText().toString().isEmpty() && !maxVal.getText().toString().isEmpty()) {
                     restList = priceRange.getListMin(minVal.getText().toString());
 
                     kawkaImage.setVisibility(View.GONE);
@@ -153,14 +153,14 @@ public class Main2Activity extends AppCompatActivity {
                         AlertDialog dialog = builder.create();
                         dialog.show();
                     }
-                } else {
+                /*} else {
                     kawkaImage.setVisibility(View.VISIBLE);
                     sambolonImage.setVisibility(View.VISIBLE);
                     persaImage.setVisibility(View.VISIBLE);
                     redCrabImage.setVisibility(View.VISIBLE);
                     ilbuccoImage.setVisibility(View.VISIBLE);
                     caramelImage.setVisibility(View.VISIBLE);
-                }
+                }*/
             }
         });
 
@@ -177,7 +177,7 @@ public class Main2Activity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (!maxVal.getText().toString().isEmpty()) {
+               // if (!maxVal.getText().toString().isEmpty() && !minVal.getText().toString().isEmpty()) {
                     restList = priceRange.getListMax(maxVal.getText().toString());
 
                     kawkaImage.setVisibility(View.GONE);
@@ -241,14 +241,14 @@ public class Main2Activity extends AppCompatActivity {
                         AlertDialog dialog = builder.create();
                         dialog.show();
                     }
-                } else {
+                /*} else {
                     kawkaImage.setVisibility(View.VISIBLE);
                     sambolonImage.setVisibility(View.VISIBLE);
                     persaImage.setVisibility(View.VISIBLE);
                     redCrabImage.setVisibility(View.VISIBLE);
                     ilbuccoImage.setVisibility(View.VISIBLE);
                     caramelImage.setVisibility(View.VISIBLE);
-                }
+                }*/
             }
         });
 
