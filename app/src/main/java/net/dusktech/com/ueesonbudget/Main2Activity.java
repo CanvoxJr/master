@@ -15,11 +15,6 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.SearchView;
 
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +51,7 @@ public class Main2Activity extends AppCompatActivity {
         minVal = findViewById(R.id.minVal);
         maxVal = findViewById(R.id.maxVal);
 
-        text = findViewById(R.id.simpleTextView);
+        /*text = findViewById(R.id.simpleTextView);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("restaurantes");
@@ -78,7 +73,7 @@ public class Main2Activity extends AppCompatActivity {
                 // Failed to read value
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
-        });
+        });*/
 
 
         minVal.addTextChangedListener(new TextWatcher() {
