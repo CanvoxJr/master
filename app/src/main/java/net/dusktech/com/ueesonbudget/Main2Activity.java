@@ -358,14 +358,16 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent kawkaIntent = new Intent(getApplicationContext(), RestauranteActivity.class);
+                kawkaIntent.putExtra("valor", "1");
                 startActivity(kawkaIntent);
             }
         });
         sambolonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent kawkaIntent = new Intent(getApplicationContext(), RestauranteActivity.class);
-                startActivity(kawkaIntent);
+                Intent sambolonIntent = new Intent(getApplicationContext(), RestauranteActivity.class);
+                sambolonIntent.putExtra("valor", "2");
+                startActivity(sambolonIntent);
             }
         });
         persaImage.setOnClickListener(new View.OnClickListener() {

@@ -58,6 +58,7 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logo"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginStart="20dp"
@@ -124,6 +125,7 @@
                     android:textSize="15sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/valor1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -147,6 +149,7 @@
                     android:src="@mipmap/foodicon" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/menu2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
@@ -156,6 +159,7 @@
                     android:textSize="15sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/valor2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -179,6 +183,7 @@
                     android:src="@mipmap/foodicon" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/menu3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
@@ -188,6 +193,7 @@
                     android:textSize="15sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/valor3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -211,6 +217,7 @@
                     android:src="@mipmap/foodicon" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/menu4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
@@ -220,6 +227,7 @@
                     android:textSize="15sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/valor4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -243,6 +251,7 @@
                     android:src="@mipmap/foodicon" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/menu5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
@@ -252,6 +261,7 @@
                     android:textSize="15sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/valor5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -275,6 +285,7 @@
                     android:src="@mipmap/foodicon" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/menu6"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
@@ -284,6 +295,7 @@
                     android:textSize="15sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/valor6"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -307,6 +319,7 @@
                     android:src="@mipmap/foodicon" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/menu7"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
@@ -316,6 +329,7 @@
                     android:textSize="15sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/valor7"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
