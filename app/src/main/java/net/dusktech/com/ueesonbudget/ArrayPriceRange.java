@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import static java.lang.Float.parseFloat;
 
 public class ArrayPriceRange {
+
     public String[][] priceRange = {
             {"kawka", "10.50"},
             {"sambolon", "5.00"},

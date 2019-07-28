@@ -7,6 +7,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,8 +15,14 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.SearchView;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main2Activity extends AppCompatActivity {
     private AppCompatImageView kawkaImage;
@@ -30,7 +37,10 @@ public class Main2Activity extends AppCompatActivity {
     private AppCompatImageView caramelImage;
     private TextInputEditText minVal;
     private TextInputEditText maxVal;
-    //RangeSeekBar rangeSeekBar;
+    private TextView text;
+
+    List<String> restaurantes = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +55,31 @@ public class Main2Activity extends AppCompatActivity {
         caramelImage = findViewById(R.id.caramelImage);
         minVal = findViewById(R.id.minVal);
         maxVal = findViewById(R.id.maxVal);
+
+        text = findViewById(R.id.simpleTextView);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("restaurantes");
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                List<String> keys = new ArrayList<>();
+                for (DataSnapshot keyNode : dataSnapshot.getChildren()) {
+                    keys.add(keyNode.getKey());
+                    restaurantes.add(keyNode.getValue().toString());
+                }
+
+                text.setText(restaurantes.get(0));
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
 
         minVal.addTextChangedListener(new TextWatcher() {
             @Override
@@ -221,44 +256,6 @@ public class Main2Activity extends AppCompatActivity {
                 }
             }
         });
-        /*rangeSeekBar = findViewById(R.id.rangeseekbar);
-        final CrystalRangeSeekbar rangeSeekbar = findViewById(R.id.rangeSeekbar1);
-        //final TextView tvMin = (TextView) rootView.findViewById(R.id.textMin1);
-        //final TextView tvMax = (TextView) rootView.findViewById(R.id.textMax1);
-
-        Log.d(TAG, "onCreate: " + priceRange);
-
-        rangeSeekBar.setSelectedMaxValue(100);
-        rangeSeekBar.setSelectedMinValue(0);
-        rangeSeekBar.setOnRangeSeekBarChangeListener(new RangeSeekBar.OnRangeSeekBarChangeListener() {
-            @Override
-            public void onRangeSeekBarValuesChanged(RangeSeekBar bar, Number minValue, Number maxValue) {
-                Number minVal = bar.getSelectedMinValue();
-                Number maxVal = bar.getSelectedMaxValue();
-                float min = (float) minVal;
-                float max = (float) maxVal;
-                Log.d(TAG, "onRangeSeekBarValuesChanged: Min" + min);
-                Log.d(TAG, "onRangeSeekBarValuesChanged: Max" + max);
-            }
-        });
-
-
-        // set listener
-        rangeSeekbar.setOnRangeSeekbarChangeListener(new OnRangeSeekbarChangeListener() {
-            @Override
-            public void valueChanged(Number minValue, Number maxValue) {
-
-            }
-        });
-
-// set final value listener
-        rangeSeekbar.setOnRangeSeekbarFinalValueListener(new OnRangeSeekbarFinalValueListener() {
-            @Override
-            public void finalValue(Number minValue, Number maxValue) {
-                Log.d(TAG, "onRangeSeekBarValuesChanged: Min" + minValue);
-                Log.d(TAG, "onRangeSeekBarValuesChanged: Max" + maxValue);
-            }
-        });*/
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -401,4 +398,6 @@ public class Main2Activity extends AppCompatActivity {
         });
 
     }
+
+
 }
