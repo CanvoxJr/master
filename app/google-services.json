@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "713840544391",
+    "firebase_url": "https://naleda-659e5.firebaseio.com",
+    "project_id": "naleda-659e5",
+    "storage_bucket": "naleda-659e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713840544391:android:09bf879a47c04056",
+        "android_client_info": {
+          "package_name": "net.dusktech.com.ueesonbudget"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713840544391-l075rf0qdit7i1ge30744pvvlqovk808.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.dusktech.com.ueesonbudget",
+            "certificate_hash": "9deb7edf057eef0884db74702ba30836e2237183"
+          }
+        },
+        {
+          "client_id": "713840544391-q2p5top3u7v9cmp1738ico3uon1se2ht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSeYeENUCJGFExLuGH7BQ2b0aCyjHrFJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713840544391-q2p5top3u7v9cmp1738ico3uon1se2ht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
