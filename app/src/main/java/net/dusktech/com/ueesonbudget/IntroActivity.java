@@ -64,9 +64,9 @@ public class IntroActivity extends AppCompatActivity {
         tvSkip = findViewById(R.id.tv_skip);
 
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Fresh Food","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur  consectetur adipiscing elit",R.drawable.img1));
-        mList.add(new ScreenItem("Fast Delivery","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur  consectetur adipiscing elit",R.drawable.img2));
-        mList.add(new ScreenItem("Easy Payment","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur  consectetur adipiscing elit",R.drawable.img3));
+        mList.add(new ScreenItem("Bienvenido","UEES on Budget te permite encontrar restaurantes cercanos de acuerdo a lo que tengas en el bolsillo. Hecha un vistazo a nuestras funcionalidades.",R.drawable.img1));
+        mList.add(new ScreenItem("Busqueda por Precio","Ahorra tiempo con nuestro buscador de restaurantes cercanos. Con un tap nos encargamos de mostrar tu restaurante favorito con el precio ideal.",R.drawable.img2));
+        mList.add(new ScreenItem("Menu Dinamico","Accede al menu completo de cada uno de los restaurantes que encuentres. Interactua con tus productos favoritos y ten a la mano su informacion detallada., ",R.drawable.img3));
 
         screenPager =findViewById(R.id.screen_viewpager);
         introViewPagerAdapter = new IntroViewPagerAdapter(this,mList);
