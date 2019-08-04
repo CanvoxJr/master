@@ -84,6 +84,14 @@ public class RestauranteActivity extends AppCompatActivity {
             }
         });
 
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent = new Intent(getApplicationContext(), QrActivity.class);
+                startActivity(backIntent);
+            }
+        });
+
         String path = "restaurantes/" + valor;
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference(path);
